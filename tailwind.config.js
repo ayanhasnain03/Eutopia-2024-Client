@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'dank': ['dank mono'],
+        "gabri":['Gabriola']
+      },
+      colors:{
+        'primary': '#94FFD8',
+      
+      }
+    },
   },
   plugins: [],
 }
