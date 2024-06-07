@@ -37,6 +37,9 @@ function Navbar() {
         <li>
           <Link to="/appointment">Appointment</Link>
         </li>
+        <li>
+          <Link to="/appointment">About</Link>
+        </li>
       </ul>
 
       <ul className="z-[1000]">
