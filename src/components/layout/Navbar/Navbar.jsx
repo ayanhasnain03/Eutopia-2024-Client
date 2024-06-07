@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { MdDashboard } from "react-icons/md";
 import Hamburger from "hamburger-react";
 import { BiSupport } from "react-icons/bi";
-
+import logo from "../../../assets/eduthopia.png";
 function Navbar() {
   const [isOpen, setOpen] = useState(false);
   const user = {
@@ -15,9 +15,16 @@ function Navbar() {
 
   return (
     <nav className="flex justify-between items-center px-4 md:px-8 py-2 z-[100] bg-white/30">
-      <div className="leading-none">
-        <h1 className="font-dank font-semibold text-2xl">Ethopia</h1>
-        <p className="font-gabri font-light">Build Tech</p>
+      <div className="leading-none flex gap-2 items-center justify-center">
+        <div>
+        <img src={logo} alt="ewe" className="w-10" />
+
+        </div>
+        <div>
+          <h1 className="font-dank font-semibold text-2xl">Ethopia</h1>
+        <p className="font-gabri font-light">Build Tech </p>
+
+        </div>
       </div>
       <ul className="hidden md:flex gap-8 md:ml-8 font-dank">
         <li>
