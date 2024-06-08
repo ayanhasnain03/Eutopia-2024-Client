@@ -3,16 +3,22 @@ import LoginVideo from "../../../assets/videos/login.mp4";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-  const submitHandler = (e)=>{
-    e.preventDefault()
-    console.log(email,password)
-  }
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(email, password);
+  };
+
+  const handleRegister = () => {
+    // Handle registration action here
+    console.log("Registration clicked");
+  };
 
   return (
     <section className="bg-slate-700 min-h-screen flex box-border justify-center items-center">
@@ -20,12 +26,19 @@ const Login = () => {
         <div className="md:w-1/2 px-8">
           <h2 className="font-bold text-3xl font-dank text-white">Login</h2>
           <p className="text-sm mt-4 font-medium text-white">If you already a member, easily log in now.</p>
-          <form action className="flex flex-col gap-4" onSubmit={submitHandler}>
-            <input value={email} onChange={(e)=>setEmail(e.target.value)} className="p-2 mt-8 rounded-xl border" type="email" name="email" placeholder="Email" />
+          <form onSubmit={submitHandler} className="flex flex-col gap-4">
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="p-2 mt-8 rounded-xl border"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
             <div className="relative">
               <input
-              value={password}
-              onChange={(e)=>setPassword(e.target.value)}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="p-2 rounded-xl border w-full"
                 type={showPassword ? "text" : "password"}
                 name="password"
@@ -53,7 +66,7 @@ const Login = () => {
           </form>
           <div className="mt-4 text-sm flex justify-between items-center container-mr flex-col gap-3">
             <p className="mr-3 md:mr-0 text-white">If you don't have an account..</p>
-            <button type='submit' className="hover:border register text-white bg-blue-600 hover:border-gray-400 rounded-xl py-2 px-5 hover:scale-110 hover:bg-[#002c7424] font-semibold duration-300">Register</button>
+            <button onClick={handleRegister} className="hover:border register text-white bg-blue-600 hover:border-gray-400 rounded-xl py-2 px-5 hover:scale-110 hover:bg-[#002c7424] font-semibold duration-300" type="button">Register</button>
           </div>
         </div>
         <div className="md:block hidden w-1/2">

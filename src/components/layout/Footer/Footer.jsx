@@ -25,61 +25,61 @@ const Footer = () => {
       <div className>
         <h6 className="text-xl font-bold text-white mb-7">Pagedone</h6>
         <ul className="flex flex-col gap-6">
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Home</a>
+          <li><Link href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Home</a>
           </li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">About</a>
+          <li><Link to={"/about"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">About</Link>
           </li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Pricing</a>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Pricing</Link>
           </li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Features</a>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Features</Link>
           </li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Pro
-              Version</a></li>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Pro
+              Version</Link></li>
         </ul>
       </div>
       <div className>
         <h6 className="text-xl font-bold text-white mb-7">Products</h6>
         <ul className="flex flex-col gap-6">
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Figma
-              UI System</a></li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Icons
-              Assets</a></li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Responsive
-              Blocks</a></li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Components
-              Library</a></li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Plugin
-              Guide</a></li>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Figma
+              UI System</Link></li>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Icons
+              Assets</Link></li>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Responsive
+              Blocks</Link></li>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Components
+              Library</Link></li>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Plugin
+              Guide</Link></li>
         </ul>
       </div>
       <div className>
         <h6 className="text-xl font-bold text-white mb-7">Resources</h6>
         <ul className="flex flex-col gap-6">
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">FAQs</a>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">FAQs</Link>
           </li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Quick
-              Start</a></li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Documentation</a>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Quick
+              Start</Link></li>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Documentation</Link>
           </li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">User
-              Guide</a></li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Plugin
-              Guide</a></li>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">User
+              Guide</Link></li>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Plugin
+              Guide</Link></li>
         </ul>
       </div>
       <div className>
         <h6 className="text-xl font-bold text-white mb-7">Support</h6>
         <ul className="flex flex-col gap-6">
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Customer
-              Support</a></li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Cookies</a>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Customer
+              Support</Link></li>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Cookies</Link>
           </li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">License</a>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">License</Link>
           </li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Terms
-              &amp; Conditions</a></li>
-          <li><a href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Privacy
-              Policy</a></li>
+          <li><Link to={"/"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Terms
+              &amp; Conditions</Link></li>
+          <li><Link to="/" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Privacy
+              Policy</Link></li>
         </ul>
       </div>
     </div>
