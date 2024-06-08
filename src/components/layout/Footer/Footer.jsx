@@ -25,7 +25,7 @@ const Footer = () => {
       <div className>
         <h6 className="text-xl font-bold text-white mb-7">Pagedone</h6>
         <ul className="flex flex-col gap-6">
-          <li><Link href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Home</a>
+          <li><Link href="javascript:;" className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Home</Link>
           </li>
           <li><Link to={"/about"} className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">About</Link>
           </li>
