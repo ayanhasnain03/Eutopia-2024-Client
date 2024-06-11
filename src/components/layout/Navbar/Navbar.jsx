@@ -48,7 +48,7 @@ function Navbar() {
             <Link to="/appointment" className="font-dank">Appointment</Link>
           </li>
           <li>
-            <Link to="/appointment" className="font-dank">About</Link>
+            <Link to="/about" className="font-dank">About</Link>
           </li>
         </ul>
 
