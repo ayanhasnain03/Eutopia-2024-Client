@@ -5,6 +5,7 @@ import AnimatedButton from "../../components/Button/AnimatedButton";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  
   return (
    <div>
      <div className="w-full relative">
