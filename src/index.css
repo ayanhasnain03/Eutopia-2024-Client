@@ -1,25 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* global.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-* {
+
+*{
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  list-style: none;
+ box-sizing: border-box;
+ list-style: none;
+ font-family: 'Poppins', sans-serif;
+}
+  html,body{
+ height: 100%;
+ width: 100%;
+ overflow-x: hidden;
 
-  font-family: 'Poppins', sans-serif;
+}
+.text-shine {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(to right, #8b8a8a 0%, #fff 50%, #9f9f9f 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+  text-decoration: none;
 }
 
-::selection {
-  background-color: white;
-  color: black;
+@keyframes shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
+
+.Btn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(to right,#bf953f,#fcf6ba,#b38728,#fbf5b7,#aa771c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.8em;
+  color: rgb(121, 103, 3);
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition-duration: 3s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.144);
+  background-size: 200% 200%;
+}
+
+.logoIcon path {
+  fill: rgb(121, 103, 3);
+}
+
+.Btn:hover {
+  transform: scale(0.95);
+  transition-duration: 3s;
+  animation: gradient 5s ease infinite;
+  background-position: right;
 }
