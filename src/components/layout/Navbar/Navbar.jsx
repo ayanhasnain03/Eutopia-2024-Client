@@ -10,14 +10,12 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 function Navbar() {
-
   useGSAP(() => {
     const tl = gsap.timeline();
-tl.to('.preloader', { delay: 3, duration: 0.5,y:-1000, });
-    tl.from('.nav-logo', { duration: 1, opacity: 0 });
-    tl.from('.nav-links-lg > li', { duration: 0.4, opacity: 0, stagger: 0.1 });
-    tl.from('.nav-links-sm > div', { duration: 0.5, opacity: 0, stagger: 0.1 });
-    tl.from('.icon > div > li , .fav ,.fav-num', { duration: 0.4, opacity: 0 });
+    tl.from(".nav-logo", { duration: 1, opacity: 0 });
+    tl.from(".nav-links-lg > li", { duration: 0.4, opacity: 0, stagger: 0.1 });
+    tl.from(".nav-links-sm > div", { duration: 0.5, opacity: 0, stagger: 0.1 });
+    tl.from(".icon > div > li , .fav ,.fav-num", { duration: 0.4, opacity: 0 });
   });
 
   const [isOpen, setOpen] = useState(false);
@@ -27,13 +25,8 @@ tl.to('.preloader', { delay: 3, duration: 0.5,y:-1000, });
   };
 
   return (
-    <div className="w-full relative md:text-white z-[200]">
-      <div className="preloader absolute top-0 left-0 w-full h-screen bg-black z-[1000] flex items-center justify-center">
-      <div class="loader">
-   <div data-glitch="Loading..." class="glitch">Loading...</div>
-</div>
-      </div>
-      <nav className="flex justify-between items-center px-4 md:px-8 py-2 z-[100] md:absolute top-0 w-full">
+    <div className="w-full relative  z-[200]">
+      <nav className="flex justify-between items-center px-4 md:px-8 py-2 z-[100]  top-0 w-full">
         <div className="leading-none flex gap-2 items-center justify-center nav-logo">
           <div>
             <Link to={"/"}>
@@ -49,22 +42,34 @@ tl.to('.preloader', { delay: 3, duration: 0.5,y:-1000, });
         </div>
         <ul className="hidden md:flex gap-8 md:ml-8 font-dank nav-links-lg">
           <li>
-            <Link to="/" className="font-dank">Home</Link>
+            <Link to="/" className="font-dank">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/projects" className="font-dank">Projects</Link>
+            <Link to="/projects" className="font-dank">
+              Projects
+            </Link>
           </li>
           <li>
-            <Link to="/services" className="font-dank">Services</Link>
+            <Link to="/services" className="font-dank">
+              Services
+            </Link>
           </li>
           <li>
-            <Link to="/contact" className="font-dank">Contact</Link>
+            <Link to="/contact" className="font-dank">
+              Contact
+            </Link>
           </li>
           <li>
-            <Link to="/appointment" className="font-dank">Appointment</Link>
+            <Link to="/appointment" className="font-dank">
+              Appointment
+            </Link>
           </li>
           <li>
-            <Link to="/about" className="font-dank">About</Link>
+            <Link to="/about" className="font-dank">
+              About
+            </Link>
           </li>
         </ul>
         <ul className=" icon z-[1000]">
@@ -118,19 +123,29 @@ tl.to('.preloader', { delay: 3, duration: 0.5,y:-1000, });
         >
           <section className="z-[1000] text-zinc-200 font-dank font-semibold nav-links-sm">
             <div>
-              <Link to="/" className="font-dank">Home</Link>
+              <Link to="/" className="font-dank">
+                Home
+              </Link>
             </div>
             <div className="my-5">
-              <Link to="/projects" className="font-dank">Projects</Link>
+              <Link to="/projects" className="font-dank">
+                Projects
+              </Link>
             </div>
             <div className="my-5">
-              <Link to="/services" className="font-dank">Services</Link>
+              <Link to="/services" className="font-dank">
+                Services
+              </Link>
             </div>
             <div className="my-5">
-              <Link to="/appointment" className="font-dank">Appointment</Link>
+              <Link to="/appointment" className="font-dank">
+                Appointment
+              </Link>
             </div>
             <div>
-              <Link to="/about" className="font-dank">About</Link>
+              <Link to="/about" className="font-dank">
+                About
+              </Link>
             </div>
           </section>
           <div className="z-100 text-zinc-200 flex flex-col items-center gap-8">
