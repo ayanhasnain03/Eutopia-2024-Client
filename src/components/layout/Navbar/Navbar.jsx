@@ -12,6 +12,7 @@ import gsap from "gsap";
 function Navbar() {
   useGSAP(() => {
     const tl = gsap.timeline();
+    tl.to(".preloader", { delay: 3, duration: 0.5, y: -1000 });
     tl.from(".nav-logo", { duration: 1, opacity: 0 });
     tl.from(".nav-links-lg > li", { duration: 0.4, opacity: 0, stagger: 0.1 });
     tl.from(".nav-links-sm > div", { duration: 0.5, opacity: 0, stagger: 0.1 });
@@ -20,13 +21,20 @@ function Navbar() {
 
   const [isOpen, setOpen] = useState(false);
   const user = {
-    _id: 42342342,
-    role: "user",
+    _id: "",
+    role: "",
   };
 
   return (
     <div className="w-full relative  z-[200]">
-      <nav className="flex justify-between items-center px-4 md:px-8 py-2 z-[100]  top-0 w-full">
+      <div className="preloader absolute top-0 left-0 w-full h-screen bg-black z-[1000] flex items-center justify-center">
+        <div class="loader">
+          <div data-glitch="Ethupia" class="glitch">
+            Ethupia...
+          </div>
+        </div>
+      </div>
+      <nav className="flex absolute text-white justify-between items-center px-4 md:px-8 py-2 z-[100]  top-0 w-full">
         <div className="leading-none flex gap-2 items-center justify-center nav-logo">
           <div>
             <Link to={"/"}>

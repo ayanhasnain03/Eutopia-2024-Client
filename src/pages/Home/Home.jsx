@@ -2,7 +2,7 @@ import HomeVideo from "../../assets/videos/homeVid.mp4";
 import CartTilt from "../../components/layout/Card/CartTilt";
 import AnimatedButton from "../../components/Button/AnimatedButton";
 import { Link } from "react-router-dom";
-
+import HomeAboutImg from "../../assets/homeAbout.jpg";
 const Home = () => {
   return (
     <div>
@@ -39,7 +39,7 @@ const Home = () => {
           <h1 className="font-dank font-semibold text-3xl md:absolute left-12 top-0 transition duration-300 hover:underline hover:text-amber-500 md:mt-0 mt-5">
             About Ethopia
           </h1>
-          <p className="md:mt-0  w-full border">
+          <p className="md:mt-10  w-full border">
             Eutopia Buildtech is a startup venture of Eutopia Buildtech private
             limited. At Eutopia Buildtech we understand that most people out
             there invest in houses or living spaces once in a lifetime and in
@@ -52,7 +52,7 @@ const Home = () => {
           </Link>
         </div>
         <div className="mt-10 md:mt-0">
-          <CartTilt imageUrl="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
+          <CartTilt imageUrl={HomeAboutImg} />
         </div>
         <Link to={"/about"} className="block md:hidden mt-5">
           <AnimatedButton text="Read More" />
