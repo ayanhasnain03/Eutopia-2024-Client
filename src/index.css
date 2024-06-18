@@ -41,7 +41,7 @@ body {
   }
 }
 
-.Btn {
+.HomeBtn {
   width: 200px;
   height: 40px;
   border: none;
@@ -73,7 +73,7 @@ body {
   fill: rgb(121, 103, 3);
 }
 
-.Btn:hover {
+.HomeBtn:hover {
   transform: scale(0.95);
   transition-duration: 3s;
   animation: gradient 5s ease infinite;
