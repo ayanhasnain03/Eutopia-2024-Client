@@ -259,38 +259,37 @@
   text-align: center;
 }
 
-.card .button-container {
+.card-btn {
   display: flex;
-  gap: 0.3rem;
-}
-
-.card .button-container .button {
-  border-radius: 1.4rem 1.4rem 0.7rem 0.7rem;
-  border: none;
-  padding: 0.5rem 0;
-  background: var(--accent-color);
-  color: white;
-  font-weight: 900;
+  align-items: center;
+  font-family: inherit;
   cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.3rem 1rem;
+  color: white;
+  background: var(--accent-color);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
 }
 
-.card .button-container .button:hover {
-  background: orangered;
+button svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-.card .button-container .buy-button {
-  flex: auto;
+button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-.card .button-container .cart-button {
-  display: grid;
-  place-content: center;
-  width: 50px;
+button:hover svg {
+  transform: translateX(5px) rotate(90deg);
 }
 
-.card .button-container .cart-button svg {
-  width: 15px;
-  fill: white;
+button:hover span {
+  transform: translateX(7px);
 }
 
 .card:hover {

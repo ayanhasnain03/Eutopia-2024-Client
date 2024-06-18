@@ -62,7 +62,10 @@ const Home = () => {
       </div>
 
       {/* New Projects */}
-      <div className="w-screen mt-10">
+      <div className="w-screen mt-20">
+        <h1 className="font-dank font-semibold text-3xl text-center">
+          Latest Projects
+        </h1>
         <CardSlider />
       </div>
     </div>
