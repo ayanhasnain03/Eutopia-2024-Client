@@ -12,7 +12,7 @@ import gsap from "gsap";
 function Navbar() {
   useGSAP(() => {
     const tl = gsap.timeline();
-    tl.to(".preloader", { delay: 3, duration: 0.5, y: -1000 });
+    tl.to(".preloader", { delay: 3, duration: 0.5, y: -1500 });
     tl.from(".nav-logo", { duration: 1, opacity: 0 });
     tl.from(".nav-links-lg > li", { duration: 0.4, opacity: 0, stagger: 0.1 });
     tl.from(".nav-links-sm > div", { duration: 0.5, opacity: 0, stagger: 0.1 });
