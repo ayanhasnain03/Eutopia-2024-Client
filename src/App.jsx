@@ -7,7 +7,7 @@ import Login from "./pages/Authorization/Login/Login";
 import Register from "./pages/Authorization/Register/Register";
 import ForgotPassword from "./pages/Authorization/ForgotPassword/ForgotPassword";
 import ResetPassword from "./pages/Authorization/ResetPassword/ResetPassword";
-
+import { Toaster } from "react-hot-toast";
 const Home = React.lazy(() => import("./pages/Home/Home"));
 const About = React.lazy(() => import("./pages/About/About"));
 
@@ -28,6 +28,7 @@ const App = () => {
           </Routes>
         </Suspense>
         <Footer />
+        <Toaster position="top-center" />
       </BrowserRouter>
     </div>
   );
