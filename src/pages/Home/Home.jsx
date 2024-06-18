@@ -3,6 +3,8 @@ import CartTilt from "../../components/layout/Card/CartTilt";
 import AnimatedButton from "../../components/Button/AnimatedButton";
 import { Link } from "react-router-dom";
 import HomeAboutImg from "../../assets/homeAbout.jpg";
+
+import CardSlider from "../../components/card/CardSlider";
 const Home = () => {
   return (
     <div>
@@ -57,6 +59,11 @@ const Home = () => {
         <Link to={"/about"} className="block md:hidden mt-5">
           <AnimatedButton text="Read More" />
         </Link>
+      </div>
+
+      {/* New Projects */}
+      <div className="w-screen mt-10">
+        <CardSlider />
       </div>
     </div>
   );
