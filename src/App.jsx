@@ -14,6 +14,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { userExists } from "./redux/reducer/authReducer";
 import ProtectedRoute from "./utils/protectedRoute/ProtectedRoute";
+import Profile from "./pages/Authorization/Profile/Profile";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -55,6 +56,14 @@ const App = () => {
               element={
                 <ProtectedRoute user={!user} redirect="/">
                   <Register />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <ProtectedRoute user={user} redirect="/login">
+                  <Profile user={user} />
                 </ProtectedRoute>
               }
             />
