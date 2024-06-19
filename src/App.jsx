@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/layout/Footer/Footer";
 import Navbar from "./components/layout/Navbar/Navbar";
@@ -10,8 +10,28 @@ import ResetPassword from "./pages/Authorization/ResetPassword/ResetPassword";
 import { Toaster } from "react-hot-toast";
 const Home = React.lazy(() => import("./pages/Home/Home"));
 const About = React.lazy(() => import("./pages/About/About"));
-
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { userExists } from "./redux/reducer/authReducer";
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:3000/api/user/profile",
+          { withCredentials: true }
+        );
+        console.log(response.data);
+        dispatch(userExists(response.data.user));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []); // Empty dependency array to run the effect only once on component mount
+
   return (
     <div>
       <BrowserRouter>
