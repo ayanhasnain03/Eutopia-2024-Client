@@ -9,7 +9,7 @@ import logo from "../../../assets/eduthopia.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-function Navbar() {
+function Navbar({ user }) {
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.to(".preloader", { delay: 3, duration: 0.5, y: -1500 });
@@ -20,10 +20,6 @@ function Navbar() {
   });
 
   const [isOpen, setOpen] = useState(false);
-  const user = {
-    _id: "",
-    role: "",
-  };
 
   return (
     <div className="w-full relative  z-[200]">

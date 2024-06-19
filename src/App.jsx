@@ -11,8 +11,9 @@ import { Toaster } from "react-hot-toast";
 const Home = React.lazy(() => import("./pages/Home/Home"));
 const About = React.lazy(() => import("./pages/About/About"));
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { userExists } from "./redux/reducer/authReducer";
+import ProtectedRoute from "./utils/protectedRoute/ProtectedRoute";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -22,26 +23,41 @@ const App = () => {
           "http://localhost:3000/api/user/profile",
           { withCredentials: true }
         );
-        console.log(response.data);
         dispatch(userExists(response.data.user));
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchData();
-  }, []); // Empty dependency array to run the effect only once on component mount
+  }, [dispatch]);
+  const { isAdmin, user } = useSelector((state) => state.auth);
 
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
+        <Navbar user={user} />
         <Suspense>
           <Routes>
             <Route path="/" element={<Home />} />
+
             <Route path="/about" element={<About />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
+
+            <Route
+              path="/login"
+              element={
+                <ProtectedRoute user={!user} redirect="/">
+                  <Login />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <ProtectedRoute user={!user} redirect="/">
+                  <Register />
+                </ProtectedRoute>
+              }
+            />
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset-password/:token" element={<ResetPassword />} />
             <Route path="*" element={<PageNotFound />} />

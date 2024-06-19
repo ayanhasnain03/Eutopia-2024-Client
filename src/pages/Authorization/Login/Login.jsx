@@ -1,8 +1,10 @@
 import { useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useLoginMutation } from "../../../redux/api/userApi";
 import { toast } from "react-hot-toast";
+import { useDispatch } from "react-redux";
+import { userExists } from "../../../redux/reducer/authReducer";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
@@ -12,12 +14,15 @@ const Login = () => {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
       const res = await loginUser({ email, password }).unwrap();
       toast.success(res?.message);
+      dispatch(userExists(res?.user));
+      navigate("/");
     } catch (error) {
       toast.error(error?.data?.message);
     }
