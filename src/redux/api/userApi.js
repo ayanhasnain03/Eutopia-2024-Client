@@ -14,10 +14,10 @@ export const userApi = createApi({
       }),
     }),
     register: builder.mutation({
-      query: (data) => ({
-        url: "/register",
+      query: (formData) => ({
+        url: "/create",
         method: "POST",
-        body: data,
+        body: formData,
       }),
     }),
   }),

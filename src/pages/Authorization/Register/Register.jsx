@@ -1,4 +1,6 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
+import { useRegisterMutation } from "../../../redux/api/userApi";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -19,9 +21,21 @@ const Register = () => {
       };
     }
   };
-  const submitHandler = (e) => {
+  const [registerUser, { isLoading }] = useRegisterMutation();
+
+  const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(username, email, password, image);
+    try {
+      const formData = new FormData();
+      formData.append("userName", username);
+      formData.append("email", email);
+      formData.append("password", password);
+      formData.append("file", image);
+      const res = await registerUser(formData).unwrap();
+      toast.success(res?.message);
+    } catch (error) {
+      toast.error(error?.data?.message);
+    }
   };
   return (
     <div className="bg-gradient-to-r from-slate-900 to-slate-700 flex items-center justify-center ">
